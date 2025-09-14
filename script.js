@@ -11,14 +11,25 @@ let h2 = document.querySelector("h2");
 let highscore = localStorage.getItem("simon_highscore") || 0;
 h2.innerHTML = `High Score : ${highscore}`;
 
-document.addEventListener("keypress", function () {
-    if (started == false) {
-        // console.log("priented");
-        started = true;
+// document.addEventListener("keypress", function () {
+//     if (started == false) {
+//         // console.log("priented");
+//         started = true;
 
+//         levelUp();
+//     }
+// });
+
+document.addEventListener("keypress",gameStart);
+document.addEventListener("touchstart",gameStart);
+document.addEventListener("click",gameStart);
+
+function gameStart(){
+    if(started == false){
+        started == true;
         levelUp();
     }
-});
+};
 
 function gameFlash(btn) {
     btn.classList.add("flash");
@@ -93,4 +104,5 @@ function reset() {
     gameseq = [];
     started = false;
     userseq = [];
+
 }

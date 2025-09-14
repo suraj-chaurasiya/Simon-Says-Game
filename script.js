@@ -19,17 +19,17 @@ h2.innerHTML = `High Score : ${highscore}`;
 //         levelUp();
 //     }
 // });
+document.addEventListener("click", startgame);
+document.addEventListener("keypress", startgame);
+document.addEventListener("touchstart", startgame);
 
-document.addEventListener("keypress",gameStart);
-document.addEventListener("touchstart",gameStart);
-document.addEventListener("click",gameStart);
-
-function gameStart(){
-    if(started == false){
-        started == true;
+function startgame(){
+    if(started == false) {
+        started= true;
         levelUp();
     }
 };
+
 
 function gameFlash(btn) {
     btn.classList.add("flash");
@@ -106,3 +106,4 @@ function reset() {
     userseq = [];
 
 }
+

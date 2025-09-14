@@ -55,4 +55,11 @@ h3{
         border: 5px solid black;
         margin: 1rem;
     }
+
+}
+
+@media (max-width:480px) {
+    .h2{
+        margin: 20px;
+    }
 }
